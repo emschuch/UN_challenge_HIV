@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UN Data Challenge</title>
+        <meta charset="utf-8">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style/d3.slider.css" />
+        <link rel="stylesheet" type="text/css" href="style/un.css">
+        <link rel="stylesheet" type="text/css" href="style/scrolling.css">
+
+    </head>
+    <body id='un'>
+
+    <!-- ADD NAVIGATION -->
+        <nav id="cd-vertical-nav">
+            <ul class='cd-nav-list'>
+                <li>
+                    <a href="#section1" data-number="1">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">Intro</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section2" data-number="2">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">Slide 1</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section3" data-number="3">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">Slide 2</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section4" data-number="4">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">Slide 3</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section5" data-number="5">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">Slide 4</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section6" data-number="6">
+                      <span class="cd-dot"></span>
+                      <!-- <span class="cd-label">Slide 5</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#section7" data-number="7">
+                        <span class="cd-dot"></span>
+                        <!-- <span class="cd-label">About</span> -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+
+<!-- TITLE SLIDE -->
+        <div id='section1' class='bg-grayedk cd-section'>
+            <div class='container title-slide text-white'>
+                <p class='title1'>UN Millennium Development Goals
+                </p>
+                <p class='title2'>Halting the Spread of HIV</p>
+                <p class='title3'>EMILY  SCHUCH</p>
+                <p class='text-gray2'>SOURCES: <a href='http://mdgs.un.org/unsd/mdg/Data.aspx' class='text-gray2'>The United Nations</a> and <a href="http://databank.worldbank.org/data/reports.aspx?source=millennium-development-goals" class='text-gray2'>The World Bank</a></p>
+            </div>
+        </div>
+
+<!-- INTRO SLIDE -->
+        <div id='section2' class='bg-green cd-section'>
+            <div class='container'>
+                <p class='text-m'>The <span class='text-underline'>HIV incidence rate</span> is defined as the number of new HIV infections in a population in a given year.</p>
+                <p class='text-m'>A rate of 0.4% means that 4 out of every 1000 people became newly infected with HIV.</p>
+            </div>
+        </div>
+
+<!-- LINECHART SLIDE -->
+        <div id='section3' class='cd-section'>
+            <div class='container'>
+                <h1 class='title text-edark'>Average Rate by Region</h1>
+                <p class='subtitle text-gray'>HIV Incidence Rate</p>
+                <div class='chart-padding'>
+
+                    <div id="linechart"></div>
+
+                    <p class='text-side text-dark'>The HIV incidence rate <span class='text-red'>decreased worldwide 76%</span> between 1996 and 2013.<br><br>It <span class='text-red'>decreased 70%</span> in sub-Saharan Africa over the same period.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+<!-- WORLD MAP SLIDE -->
+        <div id='section4' class='clearfix container cd-section'>
+            <div class='titlegroup'>
+                <h1 class='title text-edark'>Rate by Country</h1>
+                <p class='description'>Sub-Saharan Africa still has the highest rate of new HIV infections of any region in the world.</p>
+            </div>
+            <div class='slidergroup'>
+                <p>
+                    <label for="year">Year :</label>
+                    <span id="year" style="border:0; color:#F62217; font-weight:bold; "></span>
+                </p>
+                <div id="slider" style="width: 300px; margin: 0 10;"></div>
+            </div>
+
+            <div id="map"></div>
+
+
+        </div>
+
+<!-- HEATMAP SLIDE -->
+        <div id='section5' class='cd-section bg-graydk'>
+            <div class='container'>
+                <h1 class='title text-white'>Rate by Country Over Time</h1>
+                <p class='subtitle text-white'>countries with the highest average rate</p>
+
+                <div id="heatmap"></div>
+            </div>
+
+        </div>
+
+<!-- INSIGHT SLIDE -->
+        <div id='section6' class='bg-green cd-section'>
+            <div class='container text-white'>
+                <p class='text-m'>A great deal of progress has been made in stopping the spread of HIV.</p>
+                <p class='text-m2'>Even countries with the highest HIV incidence rates have experienced a dramatic decrease in the rate of new cases since the 1990s. In particular, Zimbabwe and Botswana have seen a rapid reduction in new HIV cases.</p>
+            </div>
+        </div>
+
+        
+<!-- FOOTER SLIDE -->
+        <div id='section7' class='cd-section bg-black'>
+            <div class='container'>
+                <h2 class='tools-title'>Tools Used</h2>
+                <div class='tools-margin'>
+                    <div class='tools text-white'>
+                        <p class='tools-subtitle text-gray2'>Data Management</p>
+                        <p class='tools-text'>Amazon Web Services</p>
+                        <p class='tools-text'>SQL</p>
+                    </div>
+                    <div class='tools tools--middle text-white'>
+                        <p class='tools-subtitle text-gray2'>Data Analysis</p>
+                        <p class='tools-text'>Python</p>
+                        <p class='tools-text'></p>
+                    </div>
+                    <div class='tools text-white'>
+                        <p class='tools-subtitle text-gray2'>Data Visualization</p>
+                        <p class='tools-text'>HTML / CSS</p>
+                        <p class='tools-text'>D3.js</p>
+                    </div>
+                </div>
+            </div>
+            <div class='container clearfix footer'>
+                <p class='text-light'>made by Emily Schuch 2015</p>
+                <p><a href='http://www.emilyschuch.com/' target='_self' class='mysite'>emilyschuch.com</a></p>
+            </div>
+        </div>
+
+
+<!-- SCRIPTS -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="js/d3.slider.js"></script>
+        <script src="js/un.js"></script>
+        <script src="js/un-line.js"></script>
+        <script src="js/scrolling.js"></script>
+
+    </body>
+</html>
+
